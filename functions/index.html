@@ -1,0 +1,59 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Function Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Rectangle Area Calculator</h2>
+  Length: <input type="number" id="length"><br>
+  Width: <input type="number" id="width"><br>
+  <button onclick="calculateRectangle()">Calculate Area</button>
+  <p id="areaResult"></p>
+
+  <h2>Reverse a Word</h2>
+  Text: <input type="text" id="reverseInput"><br>
+  <button onclick="reverseText()">Reverse</button>
+  <p id="reverseResult"></p>
+
+  <h2>Even or Odd Checker</h2>
+  Number: <input type="number" id="evenOddInput"><br>
+  <button onclick="checkEvenOdd()">Check</button>
+  <p id="evenOddResult"></p>
+
+  <script>
+    // Function to calculate rectangle area
+    function calculateRectangle() {
+      let length = document.getElementById("length").value;
+      let width = document.getElementById("width").value;
+      let area = length * width;
+      document.getElementById("areaResult").textContent = "Area: " + area;
+    }
+
+    // Function to reverse text
+    function reverseText() {
+      let text = document.getElementById("reverseInput").value;
+      let reversed = text.split("").reverse().join("");
+      document.getElementById("reverseResult").textContent = "Reversed: " + reversed;
+    }
+
+    // Function to check even or odd
+    function checkEvenOdd() {
+      let number = document.getElementById("evenOddInput").value;
+      let result = (number % 2 === 0) ? "Even" : "Odd";
+      document.getElementById("evenOddResult").textContent = "Number is: " + result;
+    }
+  </script>
+
+</body>
+</html>
